@@ -20,18 +20,26 @@ docker run -d --name <nombre contenedor> --mount type=bind,source=<ruta carpeta 
 
 ### ¿Qué sucede al ingresar al servidor de nginx?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+<img width="512" height="153" alt="image" src="https://github.com/user-attachments/assets/0ae04fd5-bb7c-44d1-9d64-8fd1186534f8" />
+
+# Al ingresar al servidor de Nginx y recibir el error "403 Forbidden", significa que el servidor te está negando el acceso al recurso solicitado (generalmente el directorio raíz). Esto sucede porque Nginx no puede leer los archivos en la carpeta mapeada o no encuentra el archivo principal (index.html) que debe servir por defecto.
 
 ### ¿Qué pasa con el archivo index.html del contenedor?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+# El archivo index.html que venía originalmente en la imagen de Nginx dentro del contenedor ha sido reemplazado o "escondido" por la carpeta local al usar el mapeo de volumen.
 
 ### Ir a https://html5up.net/ y descargar un template gratuito, descomprirlo dentro de tu computador en la carpeta html
 ### ¿Qué sucede al ingresar al servidor de nginx?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+## ya aparece la pagina en html en el localhost 
+<img width="1472" height="857" alt="image" src="https://github.com/user-attachments/assets/df4d9be0-a11e-445e-a356-ee797ff1e657" />
+
 
 ### Eliminar el contenedor
-# COMPLETAR CON EL COMANDO
+# docker rm mi_servidor_nginx
 
 ### ¿Qué sucede al crear nuevamente un contenedor montado al directorio definidos anteriormente?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+# ya no se abre la pagina con html a pesar que el documento está dentro de la carpeta y esto se debe a que eliminamos el contenedor
+<img width="945" height="664" alt="image" src="https://github.com/user-attachments/assets/b509fd38-b265-429d-aea9-38d5dbfb7574" />
+
 
 
