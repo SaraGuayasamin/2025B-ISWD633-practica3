@@ -6,19 +6,21 @@
 
 ### Para que persista la información es necesario conocer en dónde mysql almacena la información.
 # COMPLETAR LA SIGUIENTE ORACIÓN. REVISAR LA DOCUMENTACIÓN DE LA IMAGEN EN https://hub.docker.com/
-En el esquema del ejercicio carpeta del contenedor (a) es (COMPLETAR CON LA RUTA)
+En el esquema del ejercicio carpeta del contenedor (a) es /var/lib/mysql
 
 Ruta carpeta host: .../ejercicio3/db
 
 ### ¿Qué contiene la carpeta db del host?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+# La carpeta db del host, una vez que el contenedor MySQL ha iniciado y creado la base de datos, contiene todos los archivos binarios, datos, tablas, esquemas y configuraciones de tu base de datos MySQL. En esencia, contiene el estado persistente completo de tu servidor MySQL.
 
 ### Crear un contenedor con la imagen mysql:8  en la red net-wp, configurar las variables de entorno: MYSQL_ROOT_PASSWORD, MYSQL_DATABASE, MYSQL_USER y MYSQL_PASSWORD
-# COMPLETAR CON EL COMANDO
+# docker run -d --name contenedor_mysql --network net-wp -v C:/ruta/absoluta/ejercicio3/db:/var/lib/mysql -e MYSQL_ROOT_PASSWORD='TuPasswordRoot' -e MYSQL_DATABASE='wordpress_db' -e MYSQL_USER='wordpress_user' -e MYSQL_PASSWORD='TuPasswordUser' mysql:8
 
 ### ¿Qué observa en la carpeta db que se encontraba inicialmente vacía?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+## [NO CONTENT FOUND]Al iniciar el contenedor de MySQL con el Al iniciar el contenedor MySQL con el comando que configuramos, y al mapear la carpeta .../ejercicio3/db a la ruta de datos interna de MySQL (/var/lib/mysql), se observa lo siguiente en la carpeta del host
 
+La carpeta db (que estaba vacía) se llena automáticamente con la estructura de directorios y archivos de datos binarios del servidor MySQL.
 ### Para que persista la información es necesario conocer en dónde wordpress almacena la información.
 # COMPLETAR LA SIGUIENTE ORACIÓN. REVISAR LA DOCUMENTACIÓN DE LA IMAGEN EN https://hub.docker.com/
 En el esquema del ejercicio la carpeta del contenedor (b) es (COMPLETAR CON LA RUTA)
